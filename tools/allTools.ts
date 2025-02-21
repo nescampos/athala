@@ -4,6 +4,8 @@ import { sendTransactionTool } from "./sendTransaction";
 import { createNFTTool } from "./createNFT";
 import { registerStakeAddressTool } from "./registerStake";
 import { delegateStakeTool } from "./delegateStaking";
+import { withdrawRewardsTool } from "./withdrawRewards";
+import { deregisterStakeAddressTool } from "./deregisterStake";
 
 export interface ToolConfig<T = any> {
   /**
@@ -58,4 +60,13 @@ export const tools: Record<string, ToolConfig> = {
    * Delegate stake to a pool
    */
    delegate_stake: delegateStakeTool,
+  /**
+   * Withdraw staking rewards
+   */
+   withdraw_rewards: withdrawRewardsTool,
+
+   /**
+   * Deregister a stake address
+   */
+    deregister_stakeaddress: deregisterStakeAddressTool,
 };

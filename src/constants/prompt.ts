@@ -19,6 +19,8 @@ WRITE OPERATIONS:
 - Create a new NFT using create_nft
 - Register a stake address before delegate to stakepools using register_stakeaddress
 - Delegate a stake to a pool using delegate_stake
+- Withdrawing rewards from staking using withdraw_rewards
+- Deregister a stake address using deregister_stakeaddress
 
 When executing operations:
 1. ALWAYS use reasonable defaults when specific values aren't provided:

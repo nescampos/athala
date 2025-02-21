@@ -34,4 +34,10 @@ export interface RegisterStakeArgs {
   
 }
 
+export interface WithdrawRewardsArgs {
+  amount: string;
+  
+}
+
+
 
