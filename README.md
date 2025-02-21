@@ -62,10 +62,23 @@ The assistant has access to various tools for performing blockchain operations:
 #### Read Operations
 - **get_balance**: Check wallet balances on the Cardano network
 - **get_wallet_address**: Retrieve the connected wallet's address
+- **get_reward_addresses**: Get the rewards addresses (for staking) from connected wallet.
+- **get_unused_addresses**: Get the unused addresses from connected wallet.
 
 #### Write Operations
 - **send_transaction**: Send transactions with customizable parameters including:
   - Transaction value in ADA
+- **create_nft**: Create a NFT with customizable parameters including:
+  - You need to specify the name and description.
+  - Other parameters are default (TODO)
+- **register_stakeaddress**: Register to stake and with a pool id:
+  - Pool Id for staking
+- **delegate_stake**: Delegate stake to a pool:
+  - Pool Id for staking
+- **withdraw_rewards**: Withdraw staking rewards specifying:
+  - Amount (in ADA) for withdrawing.
+- **deregister_stakeaddress**: Deregister the wallet from staking
+  - No parameters
 
 ## Codebase Flow
 
