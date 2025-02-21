@@ -1,8 +1,8 @@
-# Sui Light Agent
+# Athala
 
 ## Description
 
-**Sui Light Agent** is a powerful tool designed to interact with Sui Network. It leverages OpenAI's GPT-4o-mini model to provide a conversational interface for users to perform various blockchain operations, such as checking wallet balances, sending transactions, and more (you can extend in a simple way). The assistant embodies the persona of any character you want.
+**Athala** is a powerful tool designed to interact with Cardano Network. It leverages OpenAI's GPT-4o-mini model to provide a conversational interface for users to perform various blockchain operations, such as checking wallet balances, sending transactions, and more (you can extend in a simple way). The assistant embodies the persona of any character you want.
 
 ## Features
 
@@ -18,6 +18,7 @@
 - Node.js (version 14 or higher)
 - TypeScript
 - OpenAI API key
+- A [Blockfrost API key](https://blockfrost.io/)
 - Environment variables for wallet private key and other configurations
 
 ### Installation
@@ -25,8 +26,8 @@
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/nescampos/suilightagent.git
-   cd suilightagent
+   git clone https://github.com/nescampos/athala.git
+   cd athala
    ```
 
 2. Install dependencies:
@@ -39,8 +40,8 @@
    Create a `.env` file in the root directory and add your OpenAI API key and wallet private key:
    ```plaintext
    OPENAI_API_KEY=your_openai_api_key
-   WALLET_PRIVATE_KEY=your_sui_mnemonic
-   SUI_NETWORK=devnet|testnet|mainnet
+   WALLET_PRIVATE_KEY=your_cardano_mnemonic
+   BLOCKFROST_API_KEY=the key from Blockfrost
    ASSISTANT_NAME=eg: Darth Vader
    ```
 
@@ -59,12 +60,12 @@ You can then interact with the assistant in the command line. Type "exit" to end
 The assistant has access to various tools for performing blockchain operations:
 
 #### Read Operations
-- **get_balance**: Check wallet balances on the Sui network
+- **get_balance**: Check wallet balances on the Cardano network
 - **get_wallet_address**: Retrieve the connected wallet's address
 
 #### Write Operations
 - **send_transaction**: Send transactions with customizable parameters including:
-  - Transaction value in SUI
+  - Transaction value in ADA
 
 ## Codebase Flow
 
@@ -120,8 +121,8 @@ The sequence diagram above shows the interaction flow between different componen
    - Results are returned through the chain of components
 
 3. **Blockchain Integration**:
-   - Tools interface with the blockchain through @mysten/sui client
-   - Operations are executed on the Sui network
+   - Tools interface with the blockchain through @meshsdk client
+   - Operations are executed on the Cardano network
    - Results are propagated back to the user
 
 4. **Session Management**:
@@ -140,7 +141,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Acknowledgments
 
 - OpenAI for providing the GPT-4o-mini model.
-- [Typescript Sui Library](https://www.npmjs.com/package/@mysten/sui) for blockchain interaction utilities.
+- [@meshsdk Library](https://meshjs.dev/) for blockchain interaction utilities.
 
 ## Contact
 
