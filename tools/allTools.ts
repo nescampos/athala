@@ -2,6 +2,8 @@ import { getBalanceTool } from "./getBalance";
 import { getWalletAddressTool } from "./getWalletAddress";
 import { sendTransactionTool } from "./sendTransaction";
 import { createNFTTool } from "./createNFT";
+import { registerStakeAddressTool } from "./registerStake";
+import { delegateStakeTool } from "./delegateStaking";
 
 export interface ToolConfig<T = any> {
   /**
@@ -46,4 +48,14 @@ export const tools: Record<string, ToolConfig> = {
    * Create a NFT with required parameters.
    */
    create_nft: createNFTTool,
+
+  /**
+   * Register a pool id for staking
+   */
+   register_stakeaddress: registerStakeAddressTool,
+
+  /**
+   * Delegate stake to a pool
+   */
+   delegate_stake: delegateStakeTool,
 };

@@ -29,3 +29,9 @@ export interface CreateNFTArgs {
   
 }
 
+export interface RegisterStakeArgs {
+  poolId: string;
+  
+}
+
+

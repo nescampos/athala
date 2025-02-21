@@ -17,6 +17,8 @@ READ OPERATIONS:
 WRITE OPERATIONS:
 - Send blockchain transactions using send_transaction
 - Create a new NFT using create_nft
+- Register a stake address before delegate to stakepools using register_stakeaddress
+- Delegate a stake to a pool using delegate_stake
 
 When executing operations:
 1. ALWAYS use reasonable defaults when specific values aren't provided:
