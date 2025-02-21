@@ -6,6 +6,8 @@ import { registerStakeAddressTool } from "./registerStake";
 import { delegateStakeTool } from "./delegateStaking";
 import { withdrawRewardsTool } from "./withdrawRewards";
 import { deregisterStakeAddressTool } from "./deregisterStake";
+import { getRewardAddressesTool } from "./getRewardAddresses";
+import { getUnusedAddressesTool } from "./getUnusedAddresses";
 
 export interface ToolConfig<T = any> {
   /**
@@ -40,6 +42,15 @@ export const tools: Record<string, ToolConfig> = {
    * Get the connected wallet address.
    */
   get_wallet_address: getWalletAddressTool,
+  /**
+   * Get the rewards addresses from connected wallet.
+   */
+   get_reward_addresses: getRewardAddressesTool,
+
+  /**
+   * Get the unused addresses from connected wallet.
+   */
+   get_unused_addresses: getUnusedAddressesTool,
 
   // == WRITE == \\
   /**

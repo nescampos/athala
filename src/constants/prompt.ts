@@ -13,6 +13,8 @@ Core Capabilities:
 READ OPERATIONS:
 - Check wallet balances using get_balance
 - Retrieve connected wallet address using get_wallet_address
+- Retrieve the reward addresses for staking controlled by connected wallet using get_reward_addresses
+- Retrieve the unused addresses from connected wallet using get_unused_addresses
 
 WRITE OPERATIONS:
 - Send blockchain transactions using send_transaction
