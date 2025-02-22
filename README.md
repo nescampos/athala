@@ -17,6 +17,7 @@
 
 - Node.js (version 14 or higher)
 - TypeScript
+- [Mesh JS](https://meshjs.dev/)
 - OpenAI API key
 - A [Blockfrost API key](https://blockfrost.io/)
 - Environment variables for wallet private key and other configurations
